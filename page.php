@@ -1,27 +1,35 @@
+
 <?php get_header();  ?>
-<?php the_field('emoji_title'); ?>
+
 <main>
+
   <?php $background = get_field('background_video_id'); ?>
-   <div class="vimeo-wrapper">
+<!--    <div class="vimeo-wrapper">
       <iframe src="https://player.vimeo.com/video/<?php echo $background; ?>?autoplay=1s&muted=1&loop=1&title=0&sidedock=0&controls=0&byline=0&portrait=0" 
               frameborder="0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
-   </div>
+   </div> -->
+   <section class="menuHeaders">
+     <h2 class="infoClick">Info</h2>
+     <h2 class="videoClick on">Videos</h2>
+   </section>
+
   <section class="pageInner">
+
     <section class="menuside">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
       <section class="info">
-        <h2>Info</h2>
+        
         <?php the_content(); ?>
       </section>
       <section class="videos">
-      <h2>Videos</h2>
+      
       <?php if( have_rows('videos') ):
           while( have_rows('videos') ) : the_row();
               $title = get_sub_field('video_title');
               $id = get_sub_field('video_id');
       
             ?>
-            <button class="videoEach">
+            <button class="videoEach"style="color:<?php the_field('link_colours', 'option' ); ?>">
               <?php echo $title; ?>
             </button>
             <section class="videoEmbed">

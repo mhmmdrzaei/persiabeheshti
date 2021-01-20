@@ -9,17 +9,67 @@
 
 @import 'normalize';
 /*
+
 ====================================
 Default Styling
 ====================================
 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ultra&display=swap');
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
 
+.flex {
+   display: flex;
+   flex-flow: row wrap;
+}
+body {
+   font-family: 'Roboto', sans-serif;
+   cursor:url(images/rosemouse2.png), auto;
+   margin: 0 auto;
+   max-width: 900px;
+   padding: 0 10px;
+
+}
+a, button {
+   cursor:url(images/axe.png), auto;
+}
 img {
 	max-width: 100%;
 }
+header {
+   font-family: 'Ultra', serif;
+   h1 {
+      text-transform: uppercase;
+      @include fontSize(35);
+      margin: 0;
+      letter-spacing: 3px;
 
-body {
-	
+      a {
+         text-decoration: none;
+         // color: white;
+
+      }
+
+   }
+}
+.menuHeaders {
+   @extend .flex;
+   justify-content: space-between;
+}
+
+.emoji {
+   margin: 0;
+   @include fontSize(16);
+   margin: 0 auto;
+   max-width: 1200px;
+   padding: 0 10px;
+}
+h2 {
+   text-transform: uppercase;
+   @include fontSize(16);
+   // cursor: pointer
 }
 
 .vimeo-wrapper {
@@ -42,7 +92,39 @@ body {
    left: 50%;
    transform: translate(-50%, -50%);
 }
+.info {
+   display: none;
+}
+.on {
+   text-decoration: underline;
+}
 
+.videoEmbed {
+   display: none;
+}
+.videos {
+    // justify-content: flex-end;
+   // @extend .flex;
+}
+button {
+   background: none;
+   border: none;
+   @include fontSize(16);
+   outline: none;
+   padding: 0;
+   margin-bottom: 5px;
+   display: block;
+   text-align: right;
+   width: 100%;
+
+}
+
+footer {
+   position: fixed;
+   bottom: 0;
+   right: 5px;
+   @include fontSize(7);
+}
 
 
 
