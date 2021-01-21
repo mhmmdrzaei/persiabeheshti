@@ -45,7 +45,7 @@ header {
       text-transform: uppercase;
       @include fontSize(35);
       margin: 0;
-      letter-spacing: 3px;
+      letter-spacing: 12px;
          font-size: 12vw;
 
 
@@ -64,16 +64,73 @@ header {
       padding: 10px 0;
    }
 }
+.emojiContainer {
+   display: flex;
+   width: 75%;
+}
 
 .emoji {
-   margin: 0;
-   @include fontSize(16);
-   margin: 0 auto;
-   max-width: 1200px;
-   padding: 0 10px;
+   // @include fontSize(16);
    position: relative;
-   top: -20px;
- left: -11px;
+   width: 40px;
+   font-size: 5vw;
+   // @include fontSize(25);
+   // top: -100px;
+}
+.emoji:nth-child(1) {
+   top: -15vw;
+}
+.emoji:nth-child(2) {
+   left: 5%;
+   top: -5vw;
+   // top: 30px;
+   // transform: rotate(-30deg);
+    // @include fontSize(25);
+    font-size: 5vw;
+
+}
+.emoji:nth-child(3) {
+   left: 15%;
+   // top: 150px;
+   top: -14vw;
+   transform: rotate(19deg);
+    font-size: 3vw;
+
+}
+.emoji:nth-child(4) {
+   left: 27%;
+   top: -3vw;
+   font-size: 4vw;
+   // top: 25px;
+   // transform: rotate(19deg);
+    // @include fontSize(19);
+
+}
+.emoji:nth-child(5) {
+   left: 50%;
+   top: -15vw;
+   // top: 160px;
+   transform: rotate(-35deg);
+    // @include fontSize(20);
+    font-size: 6vw;
+
+}
+.emoji:nth-child(6) {
+   left: 32vw;
+   top: -10vw;
+   // top: 30px;
+   transform: rotate(19deg);
+    // @include fontSize(30);
+    font-size: 4vw;
+
+}
+.emoji:nth-child(7) {
+   left: 72%;
+   // top: 90px;
+   transform: rotate(0deg);
+    // @include fontSize(25);
+    font-size: 5vw;
+
 }
 h2 {
    text-transform: uppercase;
@@ -130,7 +187,10 @@ h2 {
 }
 .toggleMore {
    &:before{
-      content: "☻";
+      content: "🤡";
+      font-size: 6vw;
+
+
    }
 }
 .pageInner {
@@ -165,9 +225,24 @@ footer {
    button {
       font-size: 12vw;
    }
-   .emoji {
-   top: 0px;
+   .toggleMore {
+   &:before{
+      // content: "🤡";
+      font-size: 11vw;
+
+
    }
+}
+   .emojiContainer {
+      width: 100%;
+   }
+   .emoji:nth-child(1),.emoji:nth-child(2),.emoji:nth-child(3),.emoji:nth-child(4),.emoji:nth-child(5),.emoji:nth-child(6){
+      top:0;
+      left: 0;
+      font-size: 7vw;
+
+   }
+
 }
 
 

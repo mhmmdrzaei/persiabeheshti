@@ -18,8 +18,18 @@
         Persia
       </a>
     </h1>
-    <p class="emoji">
-   <?php the_field('emoji_picker' , 'option'); ?>
-  </p>
+    <div class="emojiContainer">
+    <?php
+
+    if( have_rows('emoji_picker_selector', 'option') ):
+
+        while( have_rows('emoji_picker_selector', 'option') ) : the_row(); ?>
+          <div class="emoji">
+            <?php the_sub_field('emoji_each', 'option'); ?>
+          </div>
+      <?php endwhile;
+      endif; ?>
+    </div>
+
 </header><!--/.header-->
 
