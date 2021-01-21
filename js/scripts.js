@@ -10,7 +10,7 @@ $(function(){
 	$('h2.infoClick').click(function() {
   		$('.info').addClass('openInfo');
   		$('.videos').removeClass('visible');
-  		$('.videoClick').removeClass('on');
+  		$('h2.videoClick').removeClass('on');
   		$(this).addClass('on');
   		console.log('duh')
 
@@ -18,11 +18,39 @@ $(function(){
 
 	});
 	$('h2.videoClick').click(function(){
-		$('.pressMid').removeClass('openMid');
-		$('.pressMid').addClass('closeMiddle');
-		$(this).toggleClass('on');
+		$('.info').removeClass('openInfo');
+		$('.videos').addClass('visible');
+		$('h2.infoClick').removeClass('on');
+  		$(this).addClass('on');
 
 	});
 
+	$(".videoEachFull").click(function() {
+	    $(this).find('.videoEmbed').toggleClass("openVideo");
+	    $(this).find('.videoEach').toggleClass("toggleMore");
+	     // $(this).find('.artworkIteminfo').toggleClass("closed");
+	    // $(this).find('.artworkIteminfo').css("display","block");
+
+	});
+
+	$(".closeInfo").click(function() {
+	 // if($('#artworksOpenItem').hasClass('open')){
+	 //    $('#artworksOpenItem').removeClass('open')
+	 // }else{
+	   // parent = el.closest('.displayText');
+	 // }
+	 // $(".artworkItemEach").find('.artworkIteminfo').removeClass("open");
+	   if ($('.artworkIteminfo').hasClass('open')) {
+	     // parent.find('.displayText').slideToggle();
+	     $('.artworkIteminfo').removeClass('open');
+	   } 
+	   return false;
+	     // $('.artworkIteminfo').toggleClass("closed");
+	     // console.log('fuck');
+
+	 });
+
+
 
 });
+

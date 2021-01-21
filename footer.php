@@ -1,7 +1,5 @@
 <footer>
-  <div class="container">
     <p>&copy; Persia Beheshti <?php echo date('Y'); ?></p>
-  </div>
 </footer>
 
 <!-- <script>

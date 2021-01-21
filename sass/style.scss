@@ -32,6 +32,7 @@ body {
    padding: 0 10px;
 
 }
+
 a, button {
    cursor:url(images/axe.png), auto;
 }
@@ -45,6 +46,8 @@ header {
       @include fontSize(35);
       margin: 0;
       letter-spacing: 3px;
+         font-size: 12vw;
+
 
       a {
          text-decoration: none;
@@ -57,6 +60,9 @@ header {
 .menuHeaders {
    @extend .flex;
    justify-content: space-between;
+   h2 {
+      padding: 10px 0;
+   }
 }
 
 .emoji {
@@ -65,6 +71,9 @@ header {
    margin: 0 auto;
    max-width: 1200px;
    padding: 0 10px;
+   position: relative;
+   top: -20px;
+ left: -11px;
 }
 h2 {
    text-transform: uppercase;
@@ -94,6 +103,16 @@ h2 {
 }
 .info {
    display: none;
+   
+}
+.videos {
+   display: none;
+}
+.visible {
+   display: block;
+}
+.openInfo {
+   display: block;
 }
 .on {
    text-decoration: underline;
@@ -106,26 +125,50 @@ h2 {
     // justify-content: flex-end;
    // @extend .flex;
 }
+.openVideo {
+   display: block;
+}
+.toggleMore {
+   &:before{
+      content: "☻";
+   }
+}
+.pageInner {
+   min-height: 370px;
+}
 button {
    background: none;
    border: none;
    @include fontSize(16);
    outline: none;
    padding: 0;
-   margin-bottom: 5px;
+   margin-bottom: 20px;
    display: block;
    text-align: right;
    width: 100%;
+   font-size: 8vw;
+   // white-space: nowrap;
 
 }
 
 footer {
-   position: fixed;
-   bottom: 0;
-   right: 5px;
-   @include fontSize(7);
+   p {
+      // text-transform: uppercase;
+      text-align: right;
+   }
+   @include fontSize(6);
 }
-
+@media(max-width: 600px){
+   header h1 {
+      font-size: 15vw;
+   }
+   button {
+      font-size: 12vw;
+   }
+   .emoji {
+   top: 0px;
+   }
+}
 
 
 

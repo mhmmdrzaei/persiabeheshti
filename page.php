@@ -21,7 +21,7 @@
         
         <?php the_content(); ?>
       </section>
-      <section class="videos">
+      <section class="videos visible">
       
       <?php if( have_rows('videos') ):
           while( have_rows('videos') ) : the_row();
@@ -29,13 +29,14 @@
               $id = get_sub_field('video_id');
       
             ?>
-            <button class="videoEach"style="color:<?php the_field('link_colours', 'option' ); ?>">
-              <?php echo $title; ?>
-            </button>
-            <section class="videoEmbed">
-              <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/<?php echo $id; ?>?&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-            </section>
-             
+            <section class="videoEachFull">
+              <button class="videoEach"style="color:<?php the_field('link_colours', 'option' ); ?>">
+                <?php echo $title; ?>
+              </button>
+              <section class="videoEmbed">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/<?php echo $id; ?>?&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+              </section>
+            </section> 
 
       
 
