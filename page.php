@@ -20,6 +20,7 @@
       <section class="info">
         
         <?php the_content(); ?>
+        <p class="credit">Design & Development by <a href="mohammadrezaei.com">Mohammad</a></p>
       </section>
       <section class="videos visible">
       

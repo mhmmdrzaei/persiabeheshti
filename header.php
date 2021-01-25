@@ -9,6 +9,12 @@
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
 </head>
+<style type="text/css">
+  a {
+    color: <?php the_field('link_colours', 'option' ); ?>;
+    
+  }
+</style>
 
 <body <?php body_class(); ?> style="background: <?php the_field('background_colour_2', 'option' ); ?>; color: <?php the_field('font_colour_2', 'option' ); ?>">
 

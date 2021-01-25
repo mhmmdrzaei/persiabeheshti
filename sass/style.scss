@@ -36,6 +36,12 @@ body {
 a, button {
    cursor:url(images/axe.png), auto;
 }
+a {
+   text-decoration: none;
+   &:hover {
+      text-decoration: underline;
+   }
+}
 img {
 	max-width: 100%;
 }
@@ -160,7 +166,16 @@ h2 {
 }
 .info {
    display: none;
+   font-size: 4vw;
+   width: 60%;
+   p {
+      margin: 10px 0;
+   }
    
+}
+.credit {
+   font-size: 9px;
+   margin-top: 50px !important;
 }
 .videos {
    display: none;
@@ -187,8 +202,7 @@ h2 {
 }
 .toggleMore {
    &:before{
-      content: "🤡";
-      font-size: 6vw;
+      content: "☺";
 
 
    }
@@ -242,7 +256,11 @@ footer {
       font-size: 7vw;
 
    }
+   .info {
+      font-size: 10vw;
+      width: 90%;
 
+   }
 }
 
 
