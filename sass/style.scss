@@ -57,6 +57,9 @@ header {
 
       a {
          text-decoration: none;
+         &:hover {
+         text-decoration: none;
+          }
          // color: white;
 
       }
@@ -202,7 +205,7 @@ h2 {
 }
 .toggleMore {
    &:before{
-      content: "☺";
+      content: "〠";
 
 
    }
@@ -226,6 +229,8 @@ button {
 }
 
 footer {
+   position: absolute;
+   right: 7px;
    p {
       // text-transform: uppercase;
       text-align: right;
@@ -241,7 +246,7 @@ footer {
    }
    .toggleMore {
    &:before{
-      // content: "🤡";
+      // content: "〠";
       font-size: 11vw;
 
 

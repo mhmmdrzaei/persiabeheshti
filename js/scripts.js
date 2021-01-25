@@ -1,3 +1,4 @@
+
 $(function(){
 
 	// if ($('.pressMid ul li:nth-child(6)').length) {
@@ -12,7 +13,7 @@ $(function(){
   		$('.videos').removeClass('visible');
   		$('h2.videoClick').removeClass('on');
   		$(this).addClass('on');
-  		console.log('duh')
+  		console.log('kill me');
 
   
 

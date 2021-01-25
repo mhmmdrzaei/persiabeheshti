@@ -3,13 +3,13 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
+ Designer and Developer: Mohammad Rezaei
+  Site: http://mohammadrezaei.com/
   Twitter:
-  Location:
+  Location: Universe
 
 /* THANKS */
-  WordPress starter theme from HackerYou - http://hackeryou.com
+  
 
 /* SITE */
   Standards: HTML5, CSS3
