@@ -49,10 +49,9 @@ header {
    font-family: 'Ultra', serif;
    h1 {
       text-transform: uppercase;
-      @include fontSize(35);
+      @include fontSize(95);
       margin: 0;
       letter-spacing: 12px;
-         font-size: 12vw;
 
 
       a {
@@ -80,56 +79,50 @@ header {
 
 .emoji {
    // @include fontSize(16);
-   position: relative;
+   position: absolute;
    width: 40px;
+   @include fontSize(25);
    font-size: 5vw;
-   // @include fontSize(25);
    // top: -100px;
 }
 .emoji:nth-child(1) {
-   top: -15vw;
+   top: 10px;
 }
 .emoji:nth-child(2) {
-   left: 5%;
-   top: -5vw;
-   // top: 30px;
-   // transform: rotate(-30deg);
-    // @include fontSize(25);
-    font-size: 5vw;
+   left: 25%;
+   top: 100px;
 
 }
 .emoji:nth-child(3) {
-   left: 15%;
-   // top: 150px;
-   top: -14vw;
+   left: 35%;
+   top: 0;
    transform: rotate(19deg);
+   @include fontSize(20);
     font-size: 3vw;
 
 }
 .emoji:nth-child(4) {
-   left: 27%;
-   top: -3vw;
+   left: 39%;
+    top: 120px;
+   @include fontSize(27);
    font-size: 4vw;
-   // top: 25px;
-   // transform: rotate(19deg);
-    // @include fontSize(19);
+
 
 }
 .emoji:nth-child(5) {
    left: 50%;
-   top: -15vw;
-   // top: 160px;
+   top: 10px;
+
    transform: rotate(-35deg);
-    // @include fontSize(20);
+    @include fontSize(30);
     font-size: 6vw;
 
 }
 .emoji:nth-child(6) {
-   left: 32vw;
-   top: -10vw;
-   // top: 30px;
+   top: 100px;
+   left: 62%;
    transform: rotate(19deg);
-    // @include fontSize(30);
+    @include fontSize(30);
     font-size: 4vw;
 
 }
@@ -137,7 +130,7 @@ header {
    left: 72%;
    // top: 90px;
    transform: rotate(0deg);
-    // @include fontSize(25);
+    @include fontSize(25);
     font-size: 5vw;
 
 }
@@ -230,12 +223,60 @@ button {
 
 footer {
    position: absolute;
+   bottom: 7px;
    right: 7px;
    p {
       // text-transform: uppercase;
       text-align: right;
    }
    @include fontSize(6);
+}
+@media(max-width: 1100px){
+
+}
+
+@media(max-width: 900px){
+   header h1 {
+      @include fontSize(70);
+   }
+
+   .emoji:nth-child(1) {
+      top: -1%;
+   }
+   .emoji:nth-child(2) {
+      left: 11%;
+      top: 12%;
+
+
+   }
+   .emoji:nth-child(3) {
+      left: 15%;
+      top: 0;
+
+
+   }
+   .emoji:nth-child(4) {
+      left: 27%;
+      top: 11%;
+
+
+   }
+   .emoji:nth-child(5) {
+      left: 50%;
+      top: 0;
+
+
+   }
+   .emoji:nth-child(6) {
+      top: 11%;
+       left: 59%;
+
+   }
+   .emoji:nth-child(7) {
+      left: 72%;
+
+   }
+
 }
 @media(max-width: 600px){
    header h1 {
@@ -254,6 +295,9 @@ footer {
 }
    .emojiContainer {
       width: 100%;
+   }
+   .emoji {
+      position: relative;
    }
    .emoji:nth-child(1),.emoji:nth-child(2),.emoji:nth-child(3),.emoji:nth-child(4),.emoji:nth-child(5),.emoji:nth-child(6){
       top:0;
