@@ -32,6 +32,9 @@ body {
    padding: 0 10px;
 
 }
+main {
+   min-height: 100vh;
+}
 
 a, button {
    cursor:url(images/axe.png), auto;
@@ -222,9 +225,6 @@ button {
 }
 
 footer {
-   position: absolute;
-   bottom: 7px;
-   right: 7px;
    p {
       // text-transform: uppercase;
       text-align: right;
